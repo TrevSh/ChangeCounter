@@ -11,10 +11,10 @@ double dollar = 1.00;
 
 int main()
 {
-    char again;
+    char again = 0;
     do {
     int numPennies, numNickles, numDimes, numQuarters, numHalfs;
-    std::cout << "How many pennies do you have?\n";
+    std::cout << "\nHow many pennies do you have?\n";
     std::cin >> numPennies;
     std::cout << "How many nickles do you have?\n";
     std::cin >> numNickles;
@@ -25,9 +25,9 @@ int main()
     std::cout << "How many half dollars do you have?\n";
     std::cin >> numHalfs;
     
-    double value = (pennies * numPennies) + (numNickles + nickles) + (numDimes + dimes) + (numQuarters + quarters) + (numHalfs + half_dollar);
+    double value = (pennies * numPennies) + (nickles * numNickles) + (dimes * numDimes) + (quarters * numQuarters) + (half_dollar * numHalfs);
     if (value <= 1.00) {
-        std::cout << "You have " << value << " pennies.\n";
+        std::cout << "You have " << value << " cents.\n";
     }
     else {
         std::cout << "You have $" << value<<"\n";
